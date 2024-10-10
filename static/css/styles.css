@@ -1,0 +1,426 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(220, 230, 230);
+    height: 100vh;
+    width: 100%;
+    overflow: none;
+}
+.parentDiv{
+    display: flex;
+}
+.container{
+    margin-left: 40px;
+    margin-top: 40px;
+    height: 300px;
+    width: 300px;
+    border: 5px solid rgb(255, 255, 255);
+    background-color: transparent;
+    border-radius: 5px;
+    position: relative;
+}
+/* rgb(213, 226, 226) */
+.cor1, .cor2, .cont1, .cont2, .cor3, .cor4, .cont3, .cont4{
+    height:10px;
+    width: 10px;
+    border: none;
+    border-radius: 50%;
+    position: absolute;
+    cursor: pointer;
+}
+.cor1:hover{
+    height:10.5px;
+    width: 10.5px;
+    box-shadow: 0px 0px 3px black;
+}
+.cor2:hover{
+    height:10.5px;
+    width: 10.5px;
+    box-shadow: 0px 0px 3px black;
+}
+.cont1:hover{
+    height:10.5px;
+    width: 10.5px;
+    box-shadow: 0px 0px 3px black;
+}
+.cont2:hover{
+    height:10.5px;
+    width: 10.5px;
+    box-shadow: 0px 0px 3px black;
+}
+
+.cor1, .cor2, .cor3, .cor4{
+    background-color: rgb(12, 163, 75);
+}
+.cont1, .cont2{
+    background-color: rgb(60, 128, 231);
+}
+.cont3, .cont4{
+    background-color: purple;
+}
+.cont1{
+    z-index: 14;
+    top: 108px;
+    left: 45px;
+}
+.cont2{
+    z-index: 13;
+    top: 175px;
+    left: 97px;
+}
+.cor1{
+    z-index: 12;
+    top: 72px;
+    left: 72px;
+}
+.cor2{
+    z-index: 11;
+    top: 217px;
+    left: 72px;
+}
+.cor3{
+    z-index: 15;
+    top: 72px;
+    left: 217px;
+} 
+.cor4{
+    z-index: 16;
+    top: 217px;
+    left: 217px;
+} 
+.cont3{
+    z-index: 17;
+    top: 108px;
+    left: 100px;
+} 
+.cont4{
+    z-index: 18;
+    top: 36px;
+    left: 189px;
+}
+.info-div{
+    margin-top: 40px;
+    margin-left: 40px;
+    width: 200px;
+    height: 100px;
+}
+.round{
+    height: 10px;
+    width: 10px;
+    background-color: brown;
+    border-radius: 50%;
+    margin-top: 16px;
+    margin-right: 15px;
+}
+.info{
+    display: flex;
+}
+#cor1-text, #cor2-text, #cont1-text, #cont2-text{
+    font-size: 18px;
+    font-family: 'Work Sans', sans-serif;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#cont1-ball, #cont2-ball, #cor1-ball, #cor2-ball{
+    background-color: rgb(60, 128, 231);
+}
+.svgObject, .svgObject1, .svgObject2, .svgObject3, .svgObject4 {
+    position: absolute;
+    z-index: -1;
+    margin-left: 49px;
+    margin-top: 49px;
+}
+#canvas, #canvas2,#canvas3{
+    background-color: transparent;
+}
+
+.tesselation
+{
+    position:absolute;
+    top:40px;
+    box-sizing:border-box;
+    border:3px solid #fff;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+.choice-div-wrap{
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 600;
+    font-size: larger;
+    position: absolute;
+    top: 40px;
+    right: 40px;
+}
+.choice-div-wrap h3{
+    font-weight: 600;
+    margin-top: 0;
+}
+.choice-div-wrap input{
+    /* position: absolute;
+    top: 40px;
+    right: 20px; */
+    margin-bottom: 10px;
+    margin-left: 0;
+    margin-right: 8px;
+}
+.choice-div-wrap-controls{
+    margin-top: 20px;
+}
+.choice-div-wrap-controls input{
+    width: 90px;
+}
+#widthLabel{
+    margin-right: 4px;
+}
+#tesselate-btn{
+    width: 120px;
+    height: 40px;
+    border-radius: 8px;
+    border: 0.5px solid black;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 600;
+    font-size: larger;
+    background-color: rgb(236, 241, 241);
+    transition: 0.2s ease;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.459);
+    cursor: pointer;
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+#tesselate-btn:hover{
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.459);
+}
+/* =========================== Triangle UI styling ============================ */
+.TriangleDiv{
+    display: none;
+}
+.holder{
+    margin-left: 40px;
+    margin-top: 40px;
+    height: 300px;
+    width: 300px;
+    border: 5px solid rgb(255, 255, 255);
+    background-color: transparent;
+    border-radius: 5px;
+    position: relative;
+    overflow: visible;
+}
+#tcanvas{
+    background-color: transparent;
+    position: absolute;
+    z-index: -1;
+    margin-left: 53px;
+    margin-top: 52px;
+    /* the above margin properties have been provided just for providing an asthetic look */
+}
+.svgObject5{
+    background-color: transparent;
+    position: absolute;
+    z-index: -1;
+    margin-left: 52px;
+    margin-top: 53px;
+}
+.top, .left, .right, .lcont2, .lcont1, .rcont1, .rcont2, .bcont1, .bcont2{
+    height:10px;
+    width: 10px;
+    border: none;
+    border-radius: 50%;
+    left: 100%;
+    position: absolute;
+    cursor: pointer;
+    margin-left: 49px;
+    margin-top: 49px;
+    /* the above margin properties have been provided just to sync with the parent div */
+}
+.top, .left, .right{
+    background-color: rgb(12, 163, 75);
+}
+.lcont1, .lcont2{
+    background-color: rgb(60, 128, 231);
+}
+.rcont1, .rcont2{
+    background-color: rgb(143, 0, 107);
+}
+.bcont1, .bcont2{
+    background-color: rgb(224, 0, 0);
+}
+.top{
+    z-index: 14;
+    top: 70px;
+    left: 144.75px;
+}
+.left{
+    z-index: 13;
+    top: 185px;
+    left: 84px;
+}
+.right{
+    z-index: 12;
+    top: 185px;
+    left: 206px;
+}
+.lcont1{
+    z-index: 11;
+    top: 90px;
+    left: 100px;
+}
+.lcont2{
+    z-index: 15;
+    top: 165px;
+    left: 128.75px;
+} 
+.rcont1{
+    z-index: 16;
+    top: 113px;
+    left: 134.75px;
+} 
+.rcont2{
+    z-index: 17;
+    top: 139px;
+    left: 216px;
+} 
+.bcont1{
+    z-index: 18;
+    top: 215.75px;
+    left: 114px;
+}
+.bcont2{
+    z-index: 18;
+    top: 154.25px;
+    left: 176px;
+}
+
+
+
+
+
+
+
+
+
+/* =========================== New Square UI styling ============================ */
+.sparentDiv{
+    display: none;
+}
+.sholder{
+    margin-left: 40px;
+    margin-top: 40px;
+    height: 300px;
+    width: 300px;
+    border: 5px solid rgb(255, 255, 255);
+    background-color: transparent;
+    border-radius: 5px;
+    position: relative;
+}
+#scanvas{
+    background-color: transparent;
+    position: absolute;
+    z-index: -1;
+    margin-left: 53px;
+    margin-top: 52px;
+    /* the above margin properties have been provided just for providing an asthetic look */
+}
+.svgObject6{
+    background-color: transparent;
+    position: absolute;
+    z-index: -1;
+    margin-left: 52px;
+    margin-top: 53px;
+}
+.scor1, .scor2, .lvcon1, .lvcon2, .scor3, .scor4, .thcon1, .thcon2,
+.bhcon1, .bhcon2,.rvcon1, .rvcon2{
+    height:10px;
+    width: 10px;
+    border: none;
+    border-radius: 50%;
+    position: absolute;
+    cursor: pointer;
+}
+.scor1:hover, .scor2:hover, .lvcon1:hover, .lvcon2:hover, .scor3:hover,
+ .scor4:hover, .thcon1:hover, .thcon2:hover,.bhcon1:hover,
+  .bhcon2:hover,.rvcon1:hover, .rvcon2:hover{
+    height:10.5px;
+    width: 10.5px;
+    box-shadow: 0px 0px 3px black;
+}
+
+
+
+.scor1, .scor2, .scor3, .scor4{
+    background-color: rgb(12, 163, 75);
+}
+.lvcon1, .lvcon2{
+    background-color: rgb(60, 128, 231);
+}
+.thcon1, .thcon2{
+    background-color: purple;
+}
+.bhcon1, .bhcon2{
+    background-color: red;
+}
+.rvcon1, .rvcon2{
+    background-color: yellowgreen;
+}
+.lvcon1{
+    z-index: 14;
+    top: 108px;
+    left: 45px;
+}
+.lvcon2{
+    z-index: 13;
+    top: 175px;
+    left: 97px;
+}
+.scor1{
+    z-index: 12;
+    top: 72px;
+    left: 72px;
+}
+.scor2{
+    z-index: 11;
+    top: 217px;
+    left: 72px;
+}
+.scor3{
+    z-index: 15;
+    top: 72px;
+    left: 217px;
+} 
+.scor4{
+    z-index: 16;
+    top: 217px;
+    left: 217px;
+} 
+.thcon1{
+    z-index: 17;
+    top: 108px;
+    left: 100px;
+} 
+.thcon2{
+    z-index: 18;
+    top: 36px;
+    left: 189px;
+}
+.bhcon1{
+    z-index: 19;
+    top: 253px;
+    left: 100px;
+} 
+.bhcon2{
+    z-index: 20;
+    top: 181px;
+    left: 189px;
+}
+.rvcon1{
+    z-index: 11;
+    top: 108px;
+    left: 190px;
+}
+.rvcon2{
+    z-index: 12;
+    top: 181px;
+    left: 253px;
+}
