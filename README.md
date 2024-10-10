@@ -1,2 +1,2 @@
 # Generative-Pattern
-This generative pattern web application lets users create and customize intricate designs using various algorithms. Its intuitive interface allows for endless exploration of visual patterns, making it ideal for art projects and digital backgrounds. Built with modern web technologies, it offers a seamless experience for creativity and inspiration.
+This project creates customizable textile patterns for saris and other fabrics, focusing on three main designs: triangles, symmetrical squares, and asymmetrical squares. Users can modify these patterns through an intuitive draggable UI, allowing them to design shapes by adjusting coordinate points for unique and personalized textile art.
